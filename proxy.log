@@ -1,7 +1,0 @@
-2025-10-27 22:15:19,721 - INFO - 127.0.0.1 [27/Oct/2025:22:15:19 +0300] "GET /admin HTTP/1.1" 200 252 "-" "curl/8.14.1"
-2025-10-27 22:16:14,375 - ERROR - Error handling 127.0.0.1: httpbin.org:443
-2025-10-27 22:16:29,302 - ERROR - Error handling 127.0.0.1: httpbin.org:443
-2025-10-27 22:18:55,351 - ERROR - Task was destroyed but it is pending!
-task: <Task pending name='Task-6' coro=<IocpProactor.accept.<locals>.accept_coro() done, defined at C:\Users\KIM\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\windows_events.py:564> wait_for=<_OverlappedFuture cancelled>>
-2025-10-27 22:18:55,353 - ERROR - Task was destroyed but it is pending!
-task: <Task pending name='Task-11' coro=<IocpProactor.accept.<locals>.accept_coro() done, defined at C:\Users\KIM\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\windows_events.py:564> wait_for=<_OverlappedFuture cancelled>>
