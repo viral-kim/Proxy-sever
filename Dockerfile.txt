@@ -1,0 +1,21 @@
+# Use a small Python base image
+FROM python:3.14-slim
+
+WORKDIR /app
+
+# system deps (if needed)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+
+# copy app
+COPY . /app
+
+# expose ports used by proxy and admin API
+EXPOSE 8888 8000
+
+# runtime: read env from environment (we will set them on host)
+CMD ["python", "proxy.py"]
