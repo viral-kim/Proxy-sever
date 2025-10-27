@@ -1,13 +1,17 @@
-# Use a lightweight Python image
+# Use an older Python version fully compatible with aiohttp
 FROM python:3.11-slim
 
+# Set working directory
 WORKDIR /app
 
-COPY . /app
+# Copy project files into the container
+COPY . .
 
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8888
-EXPOSE 8000
+# Expose a port (optional, if your proxy uses one)
+EXPOSE 8080
 
-CMD ["python", "proxy.py"]
+# Command to start your proxy server
+CMD ["python", "main.py"]
